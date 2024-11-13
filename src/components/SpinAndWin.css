@@ -1,0 +1,55 @@
+Container for the spinning wheel and button .spin-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full screen height */
+  background-color: #f0f4f8;
+  font-family: "Arial", sans-serif;
+}
+
+/* Styling the wheel container */
+.wheel-container {
+  width: 50px; /* Reduced width */
+  height: 50px; /* Reduced height */
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 550px;
+  margin-top: 150px;
+}
+
+/* Button styling */
+.spin-button {
+  padding: 10px 30px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 190px;
+  margin-right: 90px;
+}
+
+.spin-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.spin-button:active {
+  transform: scale(0.98);
+}
+
+.wheel-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}

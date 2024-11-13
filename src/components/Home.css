@@ -1,0 +1,50 @@
+.farming-feature {
+  text-align: left; /* Align text to the left */
+  margin-left: 20px; /* Add margin for spacing */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.user-initials {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff00c8;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  position: fixed;
+  top: 10px;
+  z-index: 1000;
+  left: 600px; /* Positioned on the left side */
+}
+
+.coin-info {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -250px; /* Adjust to place it above the progress bar */
+  left: 50%;
+  transform: translateX(-50%); /* Center it horizontally */
+}
+
+.coin-icon {
+  font-size: 24px;
+  color: #f39c12;
+  margin-right: 5px;
+}
+
+.coin-number {
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,141 @@
+body {
+  background-color: #e2d2d7;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.rain {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Each raindrop */
+.rain-drop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    transform: translateX(0);
+  }
+  100% {
+    top: 100%;
+    transform: translateX(10px); /* Simulates diagonal falling */
+  }
+}
+
+.rain-drop:nth-child(1) {
+  left: 5%;
+  animation-duration: 1s;
+}
+.rain-drop:nth-child(2) {
+  left: 10%;
+  animation-duration: 1.5s;
+}
+.rain-drop:nth-child(3) {
+  left: 20%;
+  animation-duration: 1.1s;
+}
+.rain-drop:nth-child(4) {
+  left: 30%;
+  animation-duration: 1.3s;
+}
+.rain-drop:nth-child(5) {
+  left: 40%;
+  animation-duration: 0.9s;
+}
+.rain-drop:nth-child(6) {
+  left: 50%;
+  animation-duration: 1.7s;
+}
+.rain-drop:nth-child(7) {
+  left: 60%;
+  animation-duration: 1.2s;
+}
+.rain-drop:nth-child(8) {
+  left: 70%;
+  animation-duration: 1.6s;
+}
+.rain-drop:nth-child(9) {
+  left: 80%;
+  animation-duration: 1.4s;
+}
+.rain-drop:nth-child(10) {
+  left: 90%;
+  animation-duration: 1.8s;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.spin-link {
+  margin-left: 900px;
+  margin-bottom: 20px;
+}
+
+.spin-top-button {
+  margin-top: 25px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  .rain-drop {
+    width: 5px;
+    height: 10px;
+  }
+
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  .rain-drop {
+    animation-duration: 2s;
+  }
+
+  body,
+  html {
+    height: auto;
+    overflow: auto;
+  }
+
+  .rain {
+    height: 100vh;
+  }
+
+  .spin-link {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .spin-top-button {
+    margin-top: 25px;
+    font-size: 1rem;
+  }
+}

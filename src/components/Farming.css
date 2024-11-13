@@ -1,0 +1,88 @@
+.farming-section {
+  text-align: center;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 1400px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 40px auto;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.progress-bar {
+  height: 80px;
+  background: linear-gradient(135deg, #34a853, #66bb6a); /* Starting gradient */
+  background-size: 200% 200%; /* Makes room for animation */
+  animation: progress-bar-neat-animation 8s ease infinite; /* 8-second smooth loop */
+  width: 0; /* Initially no progress */
+  transition: width 1s ease; /* Smooth width change */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+}
+
+/* Neat, subtle background animation */
+@keyframes progress-bar-neat-animation {
+  0% {
+    background-position: 0% 50%; /* Starts at one end */
+  }
+  50% {
+    background-position: 100% 50%; /* Midpoint of the animation */
+  }
+  100% {
+    background-position: 0% 50%; /* Completes back at the start */
+  }
+}
+
+.progress-text {
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  z-index: 1;
+  color: white;
+  margin-left: 550px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.claim-button {
+  background-color: #28a745;
+}
+
+.claim-button:hover {
+  background-color: #218838;
+}
